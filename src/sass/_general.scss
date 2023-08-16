@@ -1,0 +1,107 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100vh;
+    padding: 18px 24px 32px 24px;
+    background-color: #fff;
+    font-family: 'TT Lakes';
+    font-style: normal;
+    color: #1B1C21;
+    &__header {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        min-height: 88px;
+        margin-bottom: 32px;
+    }
+    &__nav {        
+        margin-bottom: auto;
+    }
+    &__list {
+        padding: 0;
+        list-style-type: none;        
+    }
+    &__item:not(:last-child) {
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 32px;
+    }
+    &__link {
+        color: #1B1C21;
+        text-decoration: none;
+        &:hover {
+            color: #1B1C21;
+        }
+        &_active {
+            color: #7E7E82;
+            &::before {
+                content: url('../icons/highlight.svg');
+                position: absolute;
+                top: -40%;
+                left: -20px;
+            }
+        }
+    }
+    &__footer-buttons {
+        margin-bottom: 16px;
+    }
+    &__footer-contacts {
+        margin-bottom: 40px;
+    }
+    &__footer-languages {
+        display: flex;
+        gap: 7px;
+    }
+}
+
+.header {
+    &__logo {
+        margin-right: auto;        
+    }
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        transition: all .5s;
+    }
+}
+
+.buttons-block {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-contacts {
+    &__mail {
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+    &__phone {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+}
+
+.footer-languages {
+    &__item {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        &_active {
+            color: #7E7E82;
+        } 
+    }
+}
